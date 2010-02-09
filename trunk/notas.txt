@@ -1,0 +1,88 @@
+27 Sept
+Al  hacer el paso 2 del algoritmo de tesseract crea werd_res.best_choices->blob vacios
+y en la funcion insertletterRatings salta un error que cierra el programa.
+
+En la pagina 1 de imagesA4, bloque 13 palabra 17 da el error, es la palabra snuctures (tras
+dos paso), structures con un solo paso, comprobar por q.
+
+
+27 Sept (2)
+Añadido soporte para carácteres especiales. Tesseract saca texto en utf, solo hay que decirle a QT
+q es utf. Para ello:
+      QString::fromUtf8(char *text, -1); donde -1 es que coja el tamaño de text
+
+30 Sept
+Modificado reaccion a click de arbol. Añadido cambio de pagina si se clickea en un item de
+distinta pagina.
+Cambio de iconos de editar
+
+4 Octubre
+Añadido funciones de pintura de cajas de letras, palabras, etc. Tambien añadido funciones de
+seleccion de palabras, letras..a partir del click de una pagina,palabra...
+
+7 Octubre
+Añadida mas funciones para manejo del arbol. Pintado durante un tiempo muy corto del item
+clickado con el raton. pintado de cajas desde la aplicacion
+
+
+8 Octubre
+ajustado el timer del rectangulo al hacer click, menu del treewidget, hace falta añadirle acciones
+
+
+9 Octubre
+añadido menu funcional al arbol. Agregado mensaje cuando se pasa por encima de las cajas
+falta arreglar cuando estan las letras checkadas de una palabra, la palabra se checka y se deschecka
+se ocultan las cajas automaticamente, dejando las letras checkadas en el arbol. Añadido a arbol
+cajas para checkear
+
+10 Octubre
+con las cajas: si ocultamos y mostramos con setOpacity , el tooltip (texto al pasar por encima)
+esta activo aunq se oculte la caja, por lo q se mezclan letras,bloques y demas y no esta bien,
+se opta por setvisible q tambien desactiva eventos. A
+
+Arreglado herencia de visibilidad. Ahora toca depurar que lo q puse de ocultar cajas por cambiar
+de pagina funcione (en pageChanged de mainwindow.cpp)
+
+
+11 Octubre
+Arreglado que se seleccionen las letras en el SelectAll.
+Arreglado que en una pagina solo se vean las cajas de esa pagina (cambiando de pag). Ahora falta
+que cuando se seleccionen las cajas solo se vean las de la pagina actual. Ocultando la caja pagina
+que es padre de todas las cajas dentro de ella no funciona. Funciona si se muestra y luego oculta
+seguido. Pero cuando se da a la funcion SelectAll casca el programa y se cierra. Toca depurar
+de nuevo...
+
+11 Octubre (2)
+Arreglado problema de visibilidad de cajas de otas paginas. Cambiada la interfaz de pestañas
+a dockets. Arreglada Problema con matriz de vision de imagen en cambio de pagina (la primera
+vez de cambio de pagina no se mantenia la vista).
+
+14 Octubre
+Fixed saveAs odf. Parece ser q cuando se le asigna un Qfont a un qtextformat y lo pasas al cursor
+de un qtextedit mete dos veces letter-spacing en el formato del odf y por ello salta el error.
+Los odf son archivos comprimidos con una estructura definida. en el content.xml es donde aparecía
+el error.
+
+24 Octubre
+Sigo con lo de filtro de imagenes. Con la funcion generica no vale, detecta peor una imagen pasada
+de 200 a 300. Puesto como editor de texto el docket donde se pasa el texto. ajustes varios
+
+
+25 Octubre
+Corregido error que cuando se leia una imagen no tiff no se enviaba el texto al editor y no se
+dibujaban las cajas.Arreglado filtro. Se usan imagenes temporales. El convertidor de leptonica
+a qimage q hice no funcionaba bien para depth 32.
+
+28 Octubre
+Corregido error critico de cuando lee una imagen que no tiene resolucion metida. Ordenado un
+poco el mainwindow.
+
+1 Noviembre
+Reordenado codigo
+**usar qInstallMsgHandler para ocultar warnings de libreria
+  ***pasar qstring const char* directamente produce error, hay q almacenar los datos
+     en un qbytearray
+     debug_window_on , true->muestra errores por stderr (tesseract)
+DLLSYM STRING_VAR (debug_file, "", "File to send tprintf output to");
+DLLSYM BOOL_VAR (debug_window_on, FALSE,
+"Send tprintf to window unless file set");
