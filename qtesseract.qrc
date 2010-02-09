@@ -1,0 +1,62 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>images/Load.png</file>
+        <file>images/Picture.png</file>
+        <file>images/pointer.png</file>
+        <file>images/Print.png</file>
+        <file>images/Read.png</file>
+        <file>images/Save.png</file>
+        <file>images/Text.png</file>
+        <file>images/Zoom-best-fit.png</file>
+        <file>images/Zoom-out.png</file>
+        <file>images/Zoom-in.png</file>
+        <file>images/Zoom-original.png</file>
+        <file>images/Bold.png</file>
+        <file>images/Copy.png</file>
+        <file>images/Cut.png</file>
+        <file>images/Delete.png</file>
+        <file>images/FileNew.png</file>
+        <file>images/Help.png</file>
+        <file>images/Info.png</file>
+        <file>images/Italic.png</file>
+        <file>images/Justify-Center.png</file>
+        <file>images/Justify-Fill.png</file>
+        <file>images/Justify-Left.png</file>
+        <file>images/Justify-Right.png</file>
+        <file>images/LightOff.png</file>
+        <file>images/LightOn.png</file>
+        <file>images/LightRed.png</file>
+        <file>images/Paste.png</file>
+        <file>images/Pdf.png</file>
+        <file>images/Preview.png</file>
+        <file>images/Redo.png</file>
+        <file>images/SelectAll.png</file>
+        <file>images/Underline.png</file>
+        <file>images/Undo.png</file>
+        <file>images/Qt.png</file>
+        <file>images/branch-more.png</file>
+        <file>images/branch-open.png</file>
+        <file>images/branch-closed.png</file>
+        <file>images/branch-end.png</file>
+        <file>images/vline.png</file>
+        <file>images/Exit.png</file>
+        <file>images/Clear.png</file>
+        <file>translations/qt_ar.qm</file>
+        <file>translations/qt_ca.qm</file>
+        <file>translations/qt_de.qm</file>
+        <file>translations/qt_es.qm</file>
+        <file>translations/qtesseract_es.qm</file>
+        <file>translations/qtesseract_es.ts</file>
+        <file>translations/qt_fr.qm</file>
+        <file>translations/qt_iw.qm</file>
+        <file>translations/qt_ja_JP.qm</file>
+        <file>translations/qt_pl.qm</file>
+        <file>translations/qt_pt.qm</file>
+        <file>translations/qt_ru.qm</file>
+        <file>translations/qt_sk.qm</file>
+        <file>translations/qt_sv.qm</file>
+        <file>translations/qt_uk.qm</file>
+        <file>images/Logo 32x32.png</file>
+        <file>images/Logo 64x64.png</file>
+    </qresource>
+</RCC>

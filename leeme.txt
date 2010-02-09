@@ -1,0 +1,5 @@
+Los iconos se han sacado de:
+	- The Tango! Desktop Project (bombillas)
+	- oxygen software: oxygen-icons (otros)
+	All images on this page are released under the Creative Commons Attribution-NonCommercial-NoDerivs 2.5 License.
+El modulo del editor de texto se ha hecho a partir del que viene como ejemplo en Qt 4.5.2
